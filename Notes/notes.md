@@ -1,4 +1,5 @@
 
+
 # Git Commands
 * git init => creates a git repo in the selected folder
 * git add . => add all files in the folder to be tracked
@@ -16,5 +17,5 @@
 TODO: KATAS Create a test repo, add files, commit them, create a feature branch with other file, commit them, and then create a pull request in git, and then merge both branches and delete the outstanding branch.
 
 
-
+"this is a test to merge different branches but the same file"
 
