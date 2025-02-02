@@ -17,42 +17,101 @@
 TODO: KATAS Create a test repo, add files, commit them, create a feature branch with other file, commit them, and then create a pull request in git, and then merge both branches and delete the outstanding branch.
 
 
-# Requirement Engineering
+# Conda
 
-Requirements are presented into two levels of detail: User requirements and System requirements.
+Creating environments
+    
+    conda create -n <env-name>
 
+    //and to add packages
+    conda create -n myEnvironment python numpy pandas
 
-## User Requirements
-It describes the services that the system should provide and the constraints under which it must operate. We don’t expect to see any level of detail, or what exactly the system will do, It’s more of generic requirements.
+Listing environments
 
-It’s usually written in a natural language and supplied by diagrams.
+    conda info --envs
 
+Change active environment back to default
 
-## System Requirements
-Mean a more detailed description of the system services and the operational constraints such as how the system will be used and development constraints such as the programming languages.
+    conda activate
 
-This level of detail is needed by those who are involved in the system development, like engineers, system architects, testers, etc.
+Install packages
 
-
-# Functional & Non-Functional Requirements
-## Functional Requirements
-It covers the main functions that should be provided by the system. When expressed as user requirements, they are usually described in an abstract way.
-
-However, more specific functional system requirements describe the system functions, its inputs, processing; how it’s going to react to a particular input, and what’s the expected output.
-
-## Non-Functional Requirements
-These are the constraints on the functions provided by the system.
-
-The constraints, like how many processes the system can handle (performance), what are the (security) issues the system needs to take care of such as SQL injections …
-
-The rate of failure (reliability), what are the languages and tools that will be used (development), what are rules you need to follow to ensure the system operates within the law of the organization (legislative).
+    conda install matplotlib
 
 
-## Feasibility Report
 
-Before getting started with the software, you need to make a study to identify whether the system is worth implementing and if it can be implemented under the current budget, technical skills, schedule, and if it does contribute to the whole organization objectives or not, etc.
+# Programming paradigms
 
-# Requirements Elicitation
+![programming_paradigms](programming_paradigms.png)
+
+
+
+Imperative - describes steps that change the state of the computer (like a cooking recipe)
+
+1) Sequence of statements
+2) Order dependency
+3) Statements hold state
+4) Immutable and mutable variables
+5) Statements can have side effects
+
+
+## Object Oriented
+
+1) Main interest is on the data rather than procedure
+2) Functions that operate on related data are kept in a single data structure (object)
+3) Data is hidden (information hiding) from functions outside the object.
+4) Communication between objects is by functions (message passing) 
+
+
+
+Declarative - describes "what" a program should accomplish without describing exactly how to achieve it.
+
+## Logic 
+
+1) Programs written in sentences which are in a logic form
+2) Sentences have facts and rules about a problem
+3) Computing takes place over the sentences, and their component. This is known as a "universal" alphabet
+4) Values are assigned to variables by means of automatically generated substitutions
+5) The control is provided by a single mechanism (Automatic backtracking)
+6) Can have an inference engine
+
+## Functional
+Its a tree of functions that project values to other values.(Ex: Expression trees)
+Functions are Immutable and will return the same values for the same arguments.
+There are no global variables so there are no side effects.
+
+1) State does not exist, all data is Immutable data.
+2) Order of execution is not important
+3) A program is made up of functions and data structures
+4) Lazy evaluation
+5) No loops (instead use recursion)
+
+
+# Requirements
+
+## Functional Requirements (Task)
+Describes tasks that have to be undertaken to construct a system. Ex: a search function that takes an invoice number as an argument and returns details of an invoice that matches the invoice number.
+
+Best practices:
+
+1) A single requirement must explain a single task.
+2) Must be complete as possible. They must not be vague or rely upon unwritten domain knowledge
+3) Document must be complete as possible. No assumptions can be made that the reader will infer that extra tasks are required.
+4) All requirements must have an equivalent objective or principal to produce a working system.
+5) Provide a unique code for each requirement so that they can be tracked through the project development
+6) Reconcile the requirements so that they are logically consistent.
+
+
+## Non-Functional Requirements (Constraints)
+Specify a criteria that can be used to judge the operation of a system, rather than specific behaviors. They're typically system behaviours such as: Performance; Scaleability; and Availability.
+They're constraints on the design of the system
+
+
+## User Stories
+A user story is an informal, natural language description of one or more features of a software system, often written from the perspective of an end user or user of a system.
+
+
+## Requirements Elicitation
 
 Describe the solution to be developed, including its functions, interfaces, design, and user experience. They’re usually formulated by the client or stakeholders.
 
@@ -114,26 +173,40 @@ Then prepare use case and process flow diagrams and then prepare stakeholders fo
 * Focus groups
 * Prototyping
 
+There are also formal techniques like: FRET - Formal Requirements Elicitation Tool
 
 
-# Conda
+# Requirements Modelling
 
-Creating environments
-    
-    conda create -n <env-name>
+1) Context Diagrams (Dataflow diagrams)
+2) Activity Diagrams
+3) Class Diagrams
 
-    //and to add packages
-    conda create -n myEnvironment python numpy pandas
 
-Listing environments
+TODO: Learn UML
 
-    conda info --envs
+## Requirements Languages in the Modelling Process
 
-Change active environment back to default
+Specification language - describes a system at a much higher level than a programming language and is not directly executed. It focuses on what is to be achieved rather than how it is to be done. (Ex: OMG)
 
-    conda activate
 
-Install packages
+Modelling Language - high level language that describes a system which is bound by pre-defined rules. It is the language that is commonly used to produce the Context, Activity and Class diagrams.(Ex: UML)
 
-    conda install matplotlib
+
+
+## Goal-oriented Requirements Language
+To model conflicts between goals
+
+
+
+# Requirements Development
+
+Process that consists of a set of activities that produce requirements for a product
+
+* Step 1: Gather and Develop Requirements
+* Step 2: Write and Document Requirements
+* Step 3: Check Completeness
+* Step 4: Analyze, Refine, and Decompose Requirements
+* Step 5: Verify & Validate Requirements
+* Step 6: Manage Requirements
 
