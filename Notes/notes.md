@@ -39,7 +39,6 @@ Install packages
     conda install matplotlib
 
 
-
 # Programming paradigms
 
 ![programming_paradigms](programming_paradigms.png)
@@ -210,3 +209,45 @@ Process that consists of a set of activities that produce requirements for a pro
 * Step 5: Verify & Validate Requirements
 * Step 6: Manage Requirements
 
+
+# Collaborative Coding
+
+## Project Documentation
+
+A Python project will have at least:
+* __doc__ properties of each module in the project
+* a ReadMe.md file
+* a text file called Requirements.txt 
+
+
+The Readme.md should contain at least:
+
+* Title
+* Short Description
+* Table of Contents
+* Install
+* Usage
+* Contributing
+* License
+
+
+The Requirements.txt is a list of libraries that the project uses
+
+
+# Software Libraries
+A collection of non-volatile resources used by computer programs, often for software development.  
+
+The recommended way is to distribute your python code via PyPi using a packager. A package registered with PyPi can be installed with PIP.
+
+
+## Licenses
+
+## GPL:
+* Most restrictive license.
+* Any calling library must be open source itself, and the application must distribute any source code from the source library and the calling application.
+* Any calling application is automatically licensed under GPL.
+
+## MIT
+* A permissive license
+* Can be used in commercial applications and can be relicensed, even as GPL software or commercial software.
+* Most popular open software license.
