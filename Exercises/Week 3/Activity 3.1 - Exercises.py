@@ -490,3 +490,250 @@ else:
 # List of months: January, February, March, April, May, June, July, August, September, October, November, December
 # Input the name of Month: February
 # No. of days: 28/29 days
+
+"""
+
+month = input("Input the name of Month: ").lower()
+
+if month == "february":
+    print("No. of days: 28/29 days")
+elif month in ("april", "june", "september", "november"):
+    print("No. of days: 30 days")
+elif month in ("january", "march", "may", "july", "august", "october", "december"):
+    print("No. of days: 31 days")
+else:
+    print("month name not correct")
+    
+"""
+
+
+# ----------------------------------------------------------------------------------------------------------------#
+
+# 34. Write a Python program to sum two integers. However, if the sum is between 15 and 20 it will return 20.
+
+"""
+
+first_number = int(input("please enter the first integer to sum:"))
+second_number = int(input("please enter the second integer to sum:"))
+
+total = first_number + second_number
+
+if total >= 15 and total <= 20:
+    total = 20
+
+print(total)
+
+"""
+
+
+# ----------------------------------------------------------------------------------------------------------------#
+
+# 35. Write a Python program that checks whether a string represents an integer or not.
+# Expected Output:
+# Input a string: Python
+# The string is not an integer.
+
+"""
+
+input = input("Input a string:")
+
+if input.isdigit():
+    print("The string is an integer")
+else:
+    print("The string is not an integer")
+
+"""
+
+
+# ----------------------------------------------------------------------------------------------------------------#
+
+# 36. Write a Python program to check if a triangle is equilateral, isosceles or scalene.
+# Note :
+# An equilateral triangle is a triangle in which all three sides are equal.
+# A scalene triangle is a triangle that has three unequal sides.
+# An isosceles triangle is a triangle with (at least) two equal sides.
+# Expected Output:
+#
+# Input lengths of the triangle sides:
+# x: 6
+# y: 8
+# z: 12
+# Scalene triangle
+
+"""
+
+print("Input lengths of the triangle sides:")
+
+x = int(input("x:"))
+y = int(input("y:"))
+z = int(input("z:"))
+
+if x == y == z:
+    print("equilateral triangle")
+elif (x == y or x == z or z == y):
+    print("isosceles triangle")
+else: 
+    print("scalene triangle")
+
+"""
+
+# ----------------------------------------------------------------------------------------------------------------#
+
+# 37. Write a Python program that reads two integers representing a month and day and prints the season for that month and day.
+# Expected Output:
+# Input the month (e.g. January, February etc.): july
+# Input the day: 31
+# Season is autumn
+
+"""
+
+month = input("Input the month (e.g. January, February etc.").lower()
+
+day = int(input("Input the day:"))
+
+if month in ("january", "february", "march"):
+    season = "winter"
+elif month in ("april", "may", "june"):
+    season = "spring"
+elif month in ("july", "august", "september"):
+    season = "summer"
+else:
+    season = "autumn"
+
+if (month == "march") and day > 20:
+    season = "spring"
+elif month == "june" and day > 20:
+    season = "summer"
+elif month == "september" and day > 20:
+    season = "autumn"
+elif month == "december" and day > 20:
+    season = "winter"
+
+print(f"Season is: {season}")
+
+"""
+
+# ----------------------------------------------------------------------------------------------------------------#
+
+
+# same logic of the exercises from before. skipping...
+
+
+# ----------------------------------------------------------------------------------------------------------------#
+
+# 40. Write a Python program to find the median of three values.
+# Expected Output
+#
+# Input first number: 15
+# Input second number: 26
+# Input third number: 29
+# The median is 26.0
+
+"""
+
+first_number = int(input("Input first number: "))
+second_number = int(input("Input second number: "))
+third_number = int(input("Input third number: "))
+
+result = [first_number, second_number, third_number]
+result.sort()
+result = result[1]
+
+print(f"The median is {result}")
+
+"""
+
+# ----------------------------------------------------------------------------------------------------------------#
+
+# 41. Write a Python program to get the next day of a given date.
+# Expected Output:
+
+# Input a year: 2016
+# Input a month [1-12]: 08
+# Input a day [1-31]: 23
+# The next date is [yyyy-mm-dd] 2016-8-24
+
+"""
+
+import datetime
+
+year = int(input("Input a year: "))
+month = int(input("Input a month [1-12]: "))
+day = int(input("Input a day [1-31]: "))
+
+result = datetime.datetime(year,month,day) + datetime.timedelta(days=1)
+
+result_str = result.strftime("%y-%m-%d")
+
+print(f"The next date is [yyyy-mm-dd] {result_str}")
+
+"""
+
+# ----------------------------------------------------------------------------------------------------------------#
+
+#  Write a Python program to calculate the sum and average of n integer numbers (input from the user). Input 0 to finish
+
+"""
+
+total = 0
+
+while True:
+    value_input = int(input("Write a value to sum"))
+    if value_input == 0:
+        break
+    else:
+        total = total + value_input
+print(f"total value is: {total}")
+
+"""
+
+# ----------------------------------------------------------------------------------------------------------------#
+
+#  43. Write a Python program to create the multiplication table (from 1 to 10) of a number.
+
+"""
+Expected Output:
+
+Input a number: 6                                                       
+6 x 1 = 6                                                               
+6 x 2 = 12                                                              
+6 x 3 = 18                                                              
+6 x 4 = 24                                                              
+6 x 5 = 30                                                              
+6 x 6 = 36                                                              
+6 x 7 = 42                                                              
+6 x 8 = 48                                                              
+6 x 9 = 54                                                              
+6 x 10 = 60 
+"""
+
+"""
+
+value_input = int(input("Input a number: "))
+
+for i in range(1,11):
+    print(f"{value_input} x {i} = {value_input * i}")
+
+"""
+
+
+# ----------------------------------------------------------------------------------------------------------------#
+
+
+# 44. Write a Python program to construct the following pattern, using a nested loop number.
+"""
+Expected Output:
+
+1
+22
+333
+4444
+55555
+666666
+7777777
+88888888
+999999999
+"""
+
+for i in range(1, 10):
+    print(str(i)*(i))
