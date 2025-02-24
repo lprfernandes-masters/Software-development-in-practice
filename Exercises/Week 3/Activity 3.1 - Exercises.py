@@ -417,6 +417,8 @@ print(result)
 
 # 20. Write a Python program to print the alphabet pattern 'G
 
+"""
+
 result = ""
 
 for row in range(0, 7):
@@ -433,3 +435,58 @@ for row in range(0, 7):
     result = result + "\n"
 
 print(result)
+
+"""
+
+# ----------------------------------------------------------------------------------------------------------------#
+
+# ... exercises are very similar, skipping...
+
+# 31. Write a Python program to calculate a dog's age in dog years.
+# Note: For the first two years, a dog year is equal to 10.5 human years. After that, each dog year equals 4 human years.
+# Expected Output:
+# Input a dog's age in human years: 15
+# The dog's age in dog's years is 73
+
+"""
+
+dog_years = int(input("Input a dog's age in human years:"))
+
+if dog_years >= 2:
+    result = round((2 * 10.5) + ((dog_years - 2) * 4))
+else:
+    result = round(int(dog_years * 10.5))
+
+print(f"The dog's age in dog's years is {result}")
+
+"""
+
+# ----------------------------------------------------------------------------------------------------------------#
+
+
+# 32. Write a Python program to check whether an alphabet is a vowel or consonant.
+# Expected Output:
+# Input a letter of the alphabet: k
+# k is a consonant.
+
+"""
+
+vowels = ["a", "e", "i", "o", "u"]
+
+chosen_letter = input("Input a letter of the alphabet:").lower()
+
+if chosen_letter in vowels and chosen_letter.isalpha:
+    print(f"{chosen_letter} is a vowel")
+else:
+    print(f"{chosen_letter} is a consonant")
+
+"""
+
+# ----------------------------------------------------------------------------------------------------------------#
+
+# 33. Write a Python program to convert a month name to a number of days.
+# Expected Output:
+#
+# List of months: January, February, March, April, May, June, July, August, September, October, November, December
+# Input the name of Month: February
+# No. of days: 28/29 days
